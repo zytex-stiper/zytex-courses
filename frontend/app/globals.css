@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@theme {
+  --color-hack-bg: #050505;
+  --color-hack-card: #0d0d0d;
+  --color-hack-border: #1a1a1a;
+  --color-hack-green: #00ff9d;
+  --color-hack-cyan: #00f0ff;
+  --color-hack-purple: #bf00ff;
+  --color-hack-pink: #ff00aa;
+  --color-hack-yellow: #f0ff00;
+  --color-hack-muted: #666666;
+  --color-hack-text: #e0e0e0;
+}
+
+body {
+  background-color: #050505;
+  color: #e0e0e0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(ellipse at top, #0a1a12 0%, transparent 60%),
+    radial-gradient(ellipse at bottom, #0a0a1a 0%, transparent 60%);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: #00ff9d40; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #00ff9d80; }
+
+/* Buttons */
+.btn-primary {
+  background: transparent;
+  border: 1px solid #00ff9d;
+  color: #00ff9d;
+  font-weight: 600;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  box-shadow: 0 0 8px #00ff9d50;
+}
+.btn-primary:hover {
+  background: #00ff9d;
+  color: #000;
+  box-shadow: 0 0 25px #00ff9d80;
+}
+
+.btn-accent {
+  background: transparent;
+  border: 1px solid #00f0ff;
+  color: #00f0ff;
+  font-weight: 600;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  box-shadow: 0 0 8px #00f0ff50;
+}
+.btn-accent:hover {
+  background: #00f0ff;
+  color: #000;
+  box-shadow: 0 0 25px #00f0ff80;
+}
+
+.btn-filled {
+  background: #00ff9d;
+  color: #000;
+  font-weight: 700;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.3s;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  box-shadow: 0 0 8px #00ff9d50;
+}
+.btn-filled:hover {
+  background: #00f0ff;
+  box-shadow: 0 0 25px #00f0ff80;
+}
+
+/* Cards */
+.card {
+  background: #0d0d0d;
+  border: 1px solid #1a1a1a;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.3s;
+  position: relative;
+}
+.card:hover {
+  border-color: rgba(0, 255, 157, 0.5);
+}
+
+/* Glow text */
+.text-glow {
+  text-shadow: 0 0 10px #00ff9d80, 0 0 20px #00ff9d40;
+}
+.text-glow-cyan {
+  text-shadow: 0 0 10px #00f0ff80, 0 0 20px #00f0ff40;
+}
+
+/* Terminal */
+.terminal {
+  background: #000;
+  border: 1px solid rgba(0, 255, 157, 0.3);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-family: ui-monospace, monospace;
+  font-size: 0.875rem;
+}
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 255, 157, 0.2);
+}
+.terminal-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+}
+
+/* Inputs */
+input, textarea, select {
+  background: #000;
+  border: 1px solid #1a1a1a;
+  color: #e0e0e0;
+  border-radius: 0.25rem;
+  padding: 0.625rem 1rem;
+  transition: all 0.2s;
+  width: 100%;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: #00ff9d;
+  outline: none;
+  box-shadow: 0 0 8px #00ff9d50;
+}
+
+/* Matrix grid */
+.matrix-bg {
+  background-image: 
+    linear-gradient(rgba(0, 255, 157, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 157, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
